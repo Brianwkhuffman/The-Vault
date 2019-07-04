@@ -11,11 +11,7 @@ module.exports = function() {
     }
     
     var setValue = function(key, value){
-        if (!key){
-            return null;
-        }else{
             theVault[key] = value;
-        }
     }
     
     return{
