@@ -2,14 +2,6 @@
 module.exports = function() {
     let theVault = {};
 
-    var setValue = function(key, value){
-        if (!key){
-            return null;
-        }else{
-            theVault[key] = value;
-        }
-    }
-
     var getValue = function(key){
         if (theVault.hasOwnProperty(key) === false){
             return null;
@@ -17,6 +9,15 @@ module.exports = function() {
             return theVault[key];
         }
     }
+    
+    var setValue = function(key, value){
+        if (!key){
+            return null;
+        }else{
+            theVault[key] = value;
+        }
+    }
+    
     return{
         setValue: setValue,
         getValue: getValue
